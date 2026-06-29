@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 199229440 bytes for Failed to commit area from 0x0000000743a00000 to 0x000000074f800000 of length 199229440.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3287), pid=4068, tid=24848
+#
+# JRE version:  (11.0.16.1+1) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.16.1+1-LTS-1, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: io.qameta.allure.CommandLine serve reports/allure-results
+
+Host: Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz, 4 cores, 11G,  Windows 11 , 64 bit Build 26100 (10.0.26100.8521)
+Time: Thu Jun 25 00:17:01 2026 India Standard Time elapsed time: 0.052286 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c120f4e800):  JavaThread "Unknown thread" [_thread_in_vm, id=24848, stack(0x00000047be900000,0x00000047bea00000)]
+
+Stack: [0x00000047be900000,0x00000047bea00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x62a3da]
+V  [jvm.dll+0x76407f]
+V  [jvm.dll+0x765729]
+V  [jvm.dll+0x765db3]
+V  [jvm.dll+0x23dc18]
+V  [jvm.dll+0x6276fa]
+V  [jvm.dll+0x61c465]
+V  [jvm.dll+0x2f2c2c]
+V  [jvm.dll+0x2f2ab2]
+V  [jvm.dll+0x2f77d6]
+V  [jvm.dll+0x33a1df]
+V  [jvm.dll+0x339c10]
+V  [jvm.dll+0x2d0248]
+V  [jvm.dll+0x2d13b6]
+V  [jvm.dll+0x73e647]
+V  [jvm.dll+0x73fedf]
+V  [jvm.dll+0x346f09]
+V  [jvm.dll+0x723f50]
+V  [jvm.dll+0x3b5aef]
+V  [jvm.dll+0x3b7c01]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x2cd30]
+C  [KERNEL32.DLL+0x2e957]
+C  [ntdll.dll+0x87c1c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001c120c79760, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001c120f64800 GCTaskThread "GC Thread#0" [stack: 0x00000047bea00000,0x00000047beb00000] [id=20492]
+  0x000001c120fab000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000047beb00000,0x00000047bec00000] [id=1612]
+  0x000001c120fad000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000047bec00000,0x00000047bed00000] [id=19872]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd86ebf4d7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001c120f4ba00] Heap_lock - owner thread: 0x000001c120f4e800
+
+Heap address: 0x0000000743a00000, size: 3014 MB, Compressed Oops mode: Non-zero based: 0x0000000743a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6674b0000 - 0x00007ff6674bf000 	C:\Program Files\Java\jdk-11.0.16.1\bin\java.exe
+0x00007ffe56ac0000 - 0x00007ffe56d26000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe55870000 - 0x00007ffe55939000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe54430000 - 0x00007ffe5482a000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe540a0000 - 0x00007ffe541ec000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe3cc60000 - 0x00007ffe3cc75000 	C:\Program Files\Java\jdk-11.0.16.1\bin\VCRUNTIME140.dll
+0x00007ffe45570000 - 0x00007ffe45588000 	C:\Program Files\Java\jdk-11.0.16.1\bin\jli.dll
+0x00007ffe54830000 - 0x00007ffe548e6000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe54f00000 - 0x00007ffe54fa9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe55790000 - 0x00007ffe5583a000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe56500000 - 0x00007ffe56618000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe56330000 - 0x00007ffe564f7000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe410e0000 - 0x00007ffe41372000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8521_none_3e08b75ce33403b3\COMCTL32.dll
+0x00007ffe53fc0000 - 0x00007ffe53fe7000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe55840000 - 0x00007ffe5586b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe53e90000 - 0x00007ffe53fbb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe53ff0000 - 0x00007ffe54093000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe4dbc0000 - 0x00007ffe4dbcb000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe55940000 - 0x00007ffe55972000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe09390000 - 0x00007ffe0942b000 	C:\Program Files\Java\jdk-11.0.16.1\bin\msvcp140.dll
+0x00007ffd86be0000 - 0x00007ffd876f8000 	C:\Program Files\Java\jdk-11.0.16.1\bin\server\jvm.dll
+0x00007ffe45ac0000 - 0x00007ffe45aca000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe55200000 - 0x00007ffe55208000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe56640000 - 0x00007ffe566c0000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe41380000 - 0x00007ffe413b6000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe52ae0000 - 0x00007ffe52afb000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe3cdd0000 - 0x00007ffe3cde0000 	C:\Program Files\Java\jdk-11.0.16.1\bin\verify.dll
+0x00007ffe51570000 - 0x00007ffe517b2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe566f0000 - 0x00007ffe56a73000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe54fb0000 - 0x00007ffe55089000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffe28c80000 - 0x00007ffe28cbb000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe53de0000 - 0x00007ffe53e88000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe26600000 - 0x00007ffe26628000 	C:\Program Files\Java\jdk-11.0.16.1\bin\java.dll
+0x00007ffe3cc30000 - 0x00007ffe3cc3a000 	C:\Program Files\Java\jdk-11.0.16.1\bin\jimage.dll
+0x00007ffe30490000 - 0x00007ffe304a6000 	C:\Program Files\Java\jdk-11.0.16.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.16.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8521_none_3e08b75ce33403b3;C:\Program Files\Java\jdk-11.0.16.1\bin\server
+
+VM Arguments:
+java_command: io.qameta.allure.CommandLine serve reports/allure-results
+java_class_path (initial): C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\allure-commandline-2.36.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\allure-generator-2.36.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\allure-model-2.31.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\allure-plugin-api-2.36.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\allure1-model-1.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\annotations-15.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-beanutils-1.11.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-codec-1.11.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-collections-3.2.2.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-collections4-4.5.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-io-2.21.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-lang3-3.20.0.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-logging-1.3.5.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\commons-text-1.13.1.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\flexmark-0.62.2.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\flexmark-ext-tables-0.62.2.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\flexmark-util-0.62.2.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\flexmark-util-ast-0.62.2.jar;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\flexmark-util-builder-0.62.2.jar;C:\Use
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 199229440                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3160408064                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11.0.16.1
+CLASSPATH=C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\*;C:\Users\Manish\AppData\Roaming\npm\node_modules\allure-commandline\dist\lib\config
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\Manish\AppData\Local\Programs\Python\Python313;C:\Users\Manish\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\Manish\AppData\Local\Programs\Python\Python39\;C:\Program Files\Java\jdk-11.0.16.1\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\180\Tools\Binn\;C:\Program Files\Microsoft SQL Server\170\DTS\Binn\;C:\Users\Manish\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Manish\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Manish\AppData\Local\Programs\Python\Python313\;C:\Users\Manish\AppData\Local\Programs\Python\Python315\Scripts\;C:\Users\Manish\AppData\Local\Programs\Python\Python315\;C:\Users\Manish\AppData\Local\Programs\Python\Launcher\;C:\Users\Manish\.maven\apache-maven\bin;c:\Users\Manish\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Manish\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\Manish\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\Manish\AppData\Local\Python\pythoncore-3.14-64;C:\Users\Manish\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Manish\AppData\Local\Programs\Python\Python39\;C:\Program Files\Java\jdk-11.0.16.1\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\180\Tools\Binn\;C:
+USERNAME=Manish
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 26100 (10.0.26100.8521)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 126 stepping 5 microcode 0xcc, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, evex, sha, fma
+
+Memory: 4k page, system-wide physical 12055M (997M free)
+TotalPageFile size 20247M (AvailPageFile size 123M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 52M, peak: 242M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.16.1+1-LTS-1) for windows-amd64 JRE (11.0.16.1+1-LTS-1), built on Aug 16 2022 01:46:01 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
